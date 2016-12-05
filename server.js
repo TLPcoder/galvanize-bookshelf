@@ -1,7 +1,8 @@
 'use strict';
 
 if (process.env.NODE_ENV !== 'production') {
-  require('dotenv').config();
+  // require('dotenv').config();
+  require('dotenv').config({path: __dirname + '/.env'});
 }
 
 const express = require('express');
@@ -10,7 +11,7 @@ const app = express();
 app.disable('x-powered-by');
 
 const bodyParser = require('body-parser');
-const cookieParser = require('cookie-parser')
+const cookieParser = require('cookie-parser');
 const morgan = require('morgan');
 
 switch (app.get('env')) {

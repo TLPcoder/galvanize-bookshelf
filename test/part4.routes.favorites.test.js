@@ -38,8 +38,7 @@ suite('part4 routes favorites', () => {
               if (err) {
                 return done(err);
               }
-
-              agent.saveCookies(res);
+              // agent.saveCookies(res);
               done();
             });
         })
@@ -56,8 +55,8 @@ suite('part4 routes favorites', () => {
         .expect('Content-Type', /json/)
         .expect(200, [{
           id: 1,
-          bookId: 1,
-          userId: 1,
+          book_id: 1,
+          user_id: 1,
           createdAt: '2016-06-26T14:26:16.000Z',
           updatedAt: '2016-06-26T14:26:16.000Z',
           title: 'JavaScript, The Good Parts',
@@ -96,7 +95,7 @@ suite('part4 routes favorites', () => {
           delete res.body.createdAt;
           delete res.body.updatedAt;
         })
-        .expect(200, { id: 2, bookId: 2, userId: 1 }, done);
+        .expect(200, { id: 2, book_id: 2, user_id: 1 }, done);
     });
 
     test('DELETE /favorites', (done) => {
@@ -110,7 +109,7 @@ suite('part4 routes favorites', () => {
           delete res.body.createdAt;
           delete res.body.updatedAt;
         })
-        .expect(200, { bookId: 1, userId: 1 }, done);
+        .expect(200, { book_id: 1, user_id: 1 }, done);
     });
   });
 

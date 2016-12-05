@@ -5,7 +5,7 @@
 process.env.NODE_ENV = 'test';
 
 const assert = require('chai').assert;
-const { suite, test } = require('mocha');
+// const { suite, test } = require('mocha');
 const knex = require('../knex');
 
 suite('part1 migrations', () => {
@@ -81,6 +81,7 @@ suite('part1 migrations', () => {
         };
 
         for (const column in expected) {
+          console.log(column,  actual[column])
           assert.deepEqual(
             actual[column],
             expected[column],

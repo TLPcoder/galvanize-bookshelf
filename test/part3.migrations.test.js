@@ -74,6 +74,7 @@ suite('part3 migrations', () => {
         };
 
         for (const column in expected) {
+          console.log(expected);
           assert.deepEqual(
             actual[column],
             expected[column],

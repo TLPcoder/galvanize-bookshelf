@@ -106,8 +106,7 @@ suite('part2 routes', () => {
         coverUrl: 'http://akamaicovers.oreilly.com/images/0636920032977/lrg.jpg',
         createdAt: '2016-06-26T14:26:16.000Z',
         updatedAt: '2016-06-26T14:26:16.000Z'
-      }], done);
-
+      }],done);
       /* eslint-enable max-len */
   });
 
@@ -126,8 +125,7 @@ suite('part2 routes', () => {
         coverUrl: 'https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/284/javascript_the_good_parts.jpg',
         createdAt: '2016-06-26T14:26:16.000Z',
         updatedAt: '2016-06-26T14:26:16.000Z'
-      }, done);
-
+      },done);
       /* eslint-enable max-len */
   });
 
@@ -155,8 +153,7 @@ suite('part2 routes', () => {
         genre: 'Python',
         description: 'If you want to learn how to program, working with Python is an excellent way to start. This hands-on guide takes you through the language a step at a time, beginning with basic programming concepts before moving on to functions, recursion, data structures, and object-oriented design. This second edition and its supporting code have been updated for Python 3.',
         coverUrl: 'https://s3-us-west-2.amazonaws.com/assessment-images/galvanize_reads/photos/think_python.jpg'
-      }, done);
-
+      },done);
       /* eslint-enable max-len */
   });
 
@@ -209,4 +206,10 @@ suite('part2 routes', () => {
 
       /* eslint-enable max-len */
   });
+  // after(function(done){
+  //  knex.migrate.rollback()
+  //   .then(function(){
+  //     done();
+  //   });
+  // });
 });
